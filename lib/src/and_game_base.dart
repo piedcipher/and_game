@@ -31,7 +31,7 @@ abstract class AndGame {
 /// provides an extension method to add the `and` symbol at the end of the list.
 extension AndGameParse on List<String> {
   /// returns a string with the `and` symbol at the end of the list.
-  String parse({
+  String andGameParse({
     AndGameSymbol andGameSymbol = AndGameSymbol.and,
   }) =>
       AndGame.parse(this, andGameSymbol: andGameSymbol);

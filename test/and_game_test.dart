@@ -21,17 +21,17 @@ void main() {
 
     test('extension: & (Ampersand) Test', () {
       expect(
-        input.parse(andGameSymbol: AndGameSymbol.ampersand),
+        input.andGameParse(andGameSymbol: AndGameSymbol.ampersand),
         'Jalebi, Fafda, & Dhokla',
       );
     });
 
     test("extension: 'and' Tests", () {
       expect(
-        input.parse(andGameSymbol: AndGameSymbol.and),
+        input.andGameParse(andGameSymbol: AndGameSymbol.and),
         'Jalebi, Fafda, and Dhokla',
       );
-      expect(input.parse(), 'Jalebi, Fafda, and Dhokla');
+      expect(input.andGameParse(), 'Jalebi, Fafda, and Dhokla');
     });
   });
 }

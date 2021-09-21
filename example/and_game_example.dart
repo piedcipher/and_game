@@ -20,14 +20,14 @@ void main() {
 
   // using extension
   print(
-    input.parse(
+    input.andGameParse(
       andGameSymbol: AndGameSymbol.ampersand,
     ),
   ); // Jalebi, Fafda, & Dhokla
   print(
-    input.parse(
+    input.andGameParse(
       andGameSymbol: AndGameSymbol.and,
     ),
   ); // Jalebi, Fafda, and Dhokla
-  print(input.parse()); // Jalebi, Fafda, and Dhokla
+  print(input.andGameParse()); // Jalebi, Fafda, and Dhokla
 }
