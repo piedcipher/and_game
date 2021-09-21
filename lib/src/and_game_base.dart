@@ -8,9 +8,13 @@ enum AndGameSymbol {
 abstract class AndGame {
   /// returns a string with the `and` symbol at the end of the list.
   static String parse(
-    List input, {
+    List<String> input, {
     AndGameSymbol andGameSymbol = AndGameSymbol.and,
   }) {
+    if (input.isEmpty) {
+      throw 'List is emtpy';
+    }
+
     var output = '';
     for (int i = 0; i < input.length; i++) {
       if (i == input.length - 1) {
@@ -25,7 +29,7 @@ abstract class AndGame {
 }
 
 /// provides an extension method to add the `and` symbol at the end of the list.
-extension AndGameParse on List {
+extension AndGameParse on List<String> {
   /// returns a string with the `and` symbol at the end of the list.
   String parse({
     AndGameSymbol andGameSymbol = AndGameSymbol.and,
