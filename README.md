@@ -1,3 +1,5 @@
+# And Game
+
 A dart package to append either `&` or `and` at the end of a List.
 
 ## Features
