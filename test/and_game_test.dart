@@ -4,15 +4,34 @@ import 'package:test/test.dart';
 void main() {
   group('and_game tests', () {
     final input = ['Jalebi', 'Fafda', 'Dhokla'];
-    test('& (Ampersand) Test', () {
-      expect(AndGame.parse(input, andGameSymbol: AndGameSymbol.ampersand),
-          'Jalebi, Fafada, & Dhokala');
+    test('method: & (Ampersand) Test', () {
+      expect(
+        AndGame.parse(input, andGameSymbol: AndGameSymbol.ampersand),
+        'Jalebi, Fafda, & Dhokla',
+      );
     });
 
-    test("'and' Tests", () {
-      expect(AndGame.parse(input, andGameSymbol: AndGameSymbol.and),
-          'Jalebi, Fafada, and Dhokala');
-      expect(AndGame.parse(input), 'Jalebi, Fafada, and Dhokala');
+    test("method: 'and' Tests", () {
+      expect(
+        AndGame.parse(input, andGameSymbol: AndGameSymbol.and),
+        'Jalebi, Fafda, and Dhokla',
+      );
+      expect(AndGame.parse(input), 'Jalebi, Fafda, and Dhokla');
+    });
+
+    test('extension: & (Ampersand) Test', () {
+      expect(
+        input.parse(andGameSymbol: AndGameSymbol.ampersand),
+        'Jalebi, Fafda, & Dhokla',
+      );
+    });
+
+    test("extension: 'and' Tests", () {
+      expect(
+        input.parse(andGameSymbol: AndGameSymbol.and),
+        'Jalebi, Fafda, and Dhokla',
+      );
+      expect(input.parse(), 'Jalebi, Fafda, and Dhokla');
     });
   });
 }
