@@ -1,5 +1,5 @@
 name: and_game
-description: A starting point for Dart libraries or applications.
+description: A dart package to append either & or and at the end of a List.
 version: 1.0.0
 homepage: https://github.com/piedcipher/and_game
 repository: https://github.com/piedcipher/and_game
