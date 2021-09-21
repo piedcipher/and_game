@@ -1,0 +1,11 @@
+name: and_game
+description: A starting point for Dart libraries or applications.
+version: 1.0.0
+homepage: https://github.com/piedcipher/and_game
+
+environment:
+  sdk: '>=2.14.2 <3.0.0'
+
+dev_dependencies:
+  lints: ^1.0.0
+  test: ^1.16.0
